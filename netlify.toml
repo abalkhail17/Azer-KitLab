@@ -1,0 +1,23 @@
+[build]
+  publish = "site"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "zisi"
+
+[[redirects]]
+  from = "/api/login"
+  to = "/.netlify/functions/auth"
+  status = 200
+[[redirects]]
+  from = "/api/manifest"
+  to = "/.netlify/functions/manifest"
+  status = 200
+[[redirects]]
+  from = "/api/editor"
+  to = "/.netlify/functions/editor"
+  status = 200
+[[redirects]]
+  from = "/api/logout"
+  to = "/.netlify/functions/logout"
+  status = 200

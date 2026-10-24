@@ -1,0 +1,1 @@
+const {isAuthorized}=require('./auth.js');exports.handler=async e=>isAuthorized(e)?{statusCode:200,headers:{'Cache-Control':'no-store','Content-Type':'application/json'},body:JSON.stringify({parts:32,sha256:'908bbfe12d0bab6e9d136df7686a851705a4e1cf5ebbd769533f215c8d01ffc1'})}:{statusCode:401,headers:{'Cache-Control':'no-store'},body:'Unauthorized'};
